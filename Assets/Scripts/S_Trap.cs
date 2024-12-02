@@ -5,7 +5,7 @@ using UnityEngine;
 public class S_Trap : MonoBehaviour
 {
     [Header("Events")]
-    [SerializeField] private RSE_IntEvent eventTrapTrigger;
+    [SerializeField] private RSE_FloatEvent eventTrapTrigger;
     [Header("ScriptableObject")]
     [SerializeField] private SSO_TrapDammage sso_TrapDammage;
     [Header("References")]
@@ -14,8 +14,8 @@ public class S_Trap : MonoBehaviour
     [Header("Values")]
     [SerializeField] private float delayTrap;
     [SerializeField] private float openingTime;
-    [SerializeField] private Vector3 spikePosOpen;
-    [SerializeField] private Vector3 spikePosClose;
+    [SerializeField] private Vector3 spikePos;
+
 
     void Start()
     {
@@ -36,20 +36,23 @@ public class S_Trap : MonoBehaviour
     void OpenTrap()
     {
         spikeCollider.enabled = true;
-        spikes.transform.position = spikePosOpen;
+        spikes.transform.position += spikePos;
     }
 
     void CloseTrap()
     {
         spikeCollider.enabled = false;
-        spikes.transform.position = spikePosClose;
+        spikes.transform.position -= spikePos;
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
+            Debug.Log("Hit");
             eventTrapTrigger.RaiseEvent(sso_TrapDammage.dammage);
         }
     }
+
+    
 }
