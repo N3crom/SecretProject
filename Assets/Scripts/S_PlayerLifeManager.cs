@@ -42,6 +42,7 @@ public class S_PlayerLifeManager : MonoBehaviour
         {
             _playerLifeData.entityLife = 0;
             OnPlayerDeathEvent.RaiseEvent();
+            Debug.Log("Dead");
         }
 
         OnPlayerLifeChange.RaiseEvent();
