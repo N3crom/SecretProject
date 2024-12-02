@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "PlayerLife", menuName = "ScriptableObjects/Player/PlayerLife")]
-public class RSO_PlayerLife : ScriptableObject
+public class RSO_EntityLife : ScriptableObject
 {
-    public float playerLife;
+    public float entityLife;
 }
