@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class S_SliderPlayerLife : MonoBehaviour
+public class S_SliderLife : MonoBehaviour
 {
     [SerializeField] Slider _slider;
     [SerializeField] RSO_EntityLife _entityLifeData;
