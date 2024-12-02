@@ -387,12 +387,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d88089b4224b324eaf1e433d40d9939, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  eventTrapTrigger: {fileID: 11400000, guid: 75580e8790318a448b6e8daf44e9c899, type: 2}
+  sso_TrapDammage: {fileID: 11400000, guid: 06ebcc0328ca29a4cace15f7a97e0e3b, type: 2}
   spikes: {fileID: 4756857319179113038}
   spikeCollider: {fileID: 7275378320147483131}
   delayTrap: 5
   openingTime: 2
   spikePosOpen: {x: 0, y: 0.25, z: 0}
-  spikePosClose: {x: 0, y: 0.05, z: 0}
+  spikePosClose: {x: 0, y: 0, z: 0}
 --- !u!1 &5440198704350481648
 GameObject:
   m_ObjectHideFlags: 0
