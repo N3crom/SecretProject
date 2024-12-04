@@ -6,6 +6,7 @@ public class S_Trap : MonoBehaviour
 {
     [Header("Events")]
     [SerializeField] private RSE_FloatEvent eventTrapTrigger;
+    [SerializeField] private RSE_EventChannel eventGameWin;
     [Header("ScriptableObject")]
     [SerializeField] private SSO_TrapDammage sso_TrapDammage;
     [Header("References")]
@@ -44,6 +45,11 @@ public class S_Trap : MonoBehaviour
         spikeCollider.enabled = false;
         spikes.transform.position -= spikePos;
     }
+    
+    void DestroyTrap()
+    {
+        Destroy(gameObject);
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -54,5 +60,13 @@ public class S_Trap : MonoBehaviour
         }
     }
 
-    
+    private void OnEnable()
+    {
+        eventGameWin.RegisterListener(DestroyTrap);
+    }
+    private void OnDisable()
+    {
+        eventGameWin.UnregisterListener(DestroyTrap);
+    }
+
 }
