@@ -13,7 +13,6 @@ public class S_Player : MonoBehaviour
     }
     private void Update()
     {
-        Debug.Log(playerPositionInitial);
     }
     void ReturnToPosition()
     {

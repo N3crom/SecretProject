@@ -466,7 +466,7 @@ MonoBehaviour:
   sso_TrapDammage: {fileID: 11400000, guid: 06ebcc0328ca29a4cace15f7a97e0e3b, type: 2}
   spikes: {fileID: 6458906904378098242}
   spikeCollider: {fileID: 1128565103257968670}
-  delayTrap: 5
+  delayTrap: 2
   openingTime: 2
   spikePos: {x: 0, y: 0.2, z: 0}
 --- !u!1 &6458906904378098242
