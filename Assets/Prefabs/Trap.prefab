@@ -425,6 +425,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1827427936885632481}
   - component: {fileID: 1562570638062935542}
+  - component: {fileID: 6372201961382436105}
   m_Layer: 0
   m_Name: Trap
   m_TagString: Untagged
@@ -465,10 +466,31 @@ MonoBehaviour:
   eventGameWin: {fileID: 11400000, guid: 2ec17c41da95b5e428e96413853ef4ef, type: 2}
   sso_TrapDammage: {fileID: 11400000, guid: 06ebcc0328ca29a4cace15f7a97e0e3b, type: 2}
   spikes: {fileID: 6458906904378098242}
-  spikeCollider: {fileID: 1128565103257968670}
+  spikeCollider: {fileID: 6372201961382436105}
   delayTrap: 2
   openingTime: 2
   spikePos: {x: 0, y: 0.2, z: 0}
+--- !u!65 &6372201961382436105
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4944877231029731824}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Size: {x: 2, y: 0.3, z: 2}
+  m_Center: {x: 0, y: 0.03, z: 0}
 --- !u!1 &6458906904378098242
 GameObject:
   m_ObjectHideFlags: 0
@@ -478,7 +500,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7925033437644950624}
-  - component: {fileID: 1128565103257968670}
   m_Layer: 0
   m_Name: SpikesGroup
   m_TagString: Untagged
@@ -506,27 +527,6 @@ Transform:
   - {fileID: 6064563318127805908}
   m_Father: {fileID: 1827427936885632481}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1128565103257968670
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6458906904378098242}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Size: {x: 2, y: 0.3, z: 2}
-  m_Center: {x: 0, y: 0.03, z: 0}
 --- !u!1 &9208361538678131776
 GameObject:
   m_ObjectHideFlags: 0

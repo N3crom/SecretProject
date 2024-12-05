@@ -53,6 +53,7 @@ public class S_Trap : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log("Hit");
         if (other.CompareTag("Player"))
         {
             Debug.Log("Hit");
